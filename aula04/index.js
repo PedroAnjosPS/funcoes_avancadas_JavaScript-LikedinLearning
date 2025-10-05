@@ -1,5 +1,7 @@
-function multiplicador(a, b) {
-    return a * b;
+function multiplicador(a) {
+    return function(b) {
+        return a * b;
+    };
 }
 
-console.log("Resultado: " + multiplicador(5, 10));
+console.log("Resultado: " + multiplicador(5)(10));
